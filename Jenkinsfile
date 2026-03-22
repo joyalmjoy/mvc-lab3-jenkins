@@ -6,13 +6,6 @@ pipeline {
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/joyalmjoy/mvc-lab3-jenkins.git'
-            }
-        }
-
         stage('Build Maven Project') {
             steps {
                 bat 'mvn clean package'
